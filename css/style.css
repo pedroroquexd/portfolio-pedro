@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.gif-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.; /* deixa o GIF mais sutil */
+    pointer-events: none; /* impede que o GIF interfira com cliques */
+}
+
+.gif-container img {
+    width: 400px; /* ajustável conforme preferir */
+    height: auto;
+}
+
+main.container {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 50px 50px 100px;
+    box-sizing: border-box;
+}
+
+.text-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.text-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.text-content h2 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.blinking {
+    display: inline-block;
+}
+
+#dynamic-text {
+    display: inline-block;
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    background-color: #fff;
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
